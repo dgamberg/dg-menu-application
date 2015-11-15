@@ -8,9 +8,11 @@
 
 .menu-item-name{
     float: left;
+    font-size: 20px;
 }
 .menu-item-price{
     float: right;
+    font-size: 18px;
 }
 .menu-item-description{
     clear: both;
