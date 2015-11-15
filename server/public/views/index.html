@@ -12,14 +12,16 @@
     <script type="text/javascript" src="/assets/scripts/app.js"></script>
     <!--<script type="text/javascript" src="/assets/scripts/routes.js"></script>-->
 </head>
-<body>
+<body ng-controller="MenuController">
     <section class="container">
 
         <header ng-include="'/views/header.html'"></header>
 
-        <nav ng-include="'/views/menu.html'"></nav>
+        <nav ng-include="'/views/navigation.html'"></nav>
 
-        <main ng-view></main>
+
+
+        <main ng-view ></main>
 
         <footer ng-include="'/views/footer.html'"></footer>
 

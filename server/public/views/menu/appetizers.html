@@ -1,0 +1,18 @@
+<section class="container" >
+    <h3>Appetizers</h3>
+    <div id="menuContainer" >
+        <div ng-repeat="menuItem in menuArray | filter: menuItem.category='Appetizers'" >
+            <div class='menu-item-container well'>
+                <div class='menu-item-name'>{{ menuItem.name }}</div>
+                <div class='menu-item-price'>
+                    <p>{{ menuItem.price | currency }}</p>
+                    <button class="btn btn-success" ng-click="addToOrder(menuItem)">add To Order</button>
+                </div>
+                <div class='menu-item-description'>{{ menuItem.description }}</div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

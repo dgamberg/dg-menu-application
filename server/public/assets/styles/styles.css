@@ -1,9 +1,9 @@
 .menu-item-container {
     color: #000;
     margin-right: auto;
-    margin-bottom: 11px;
+    margin-bottom: 15px;
     border-radius: 5px;
-    padding: 10px 20px 20px 20px;
+    padding: 15px 20px 30px 20px;
 }
 
 .menu-item-name{
@@ -15,9 +15,15 @@
     font-size: 18px;
 }
 .menu-item-description{
-    clear: both;
+    clear: left;
 }
-
+.cart-item-container {
+    color: #000;
+    margin-right: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 15px 20px 45px 20px;
+}
 
 
 

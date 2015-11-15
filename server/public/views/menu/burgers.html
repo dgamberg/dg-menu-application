@@ -1,10 +1,13 @@
-<section class="container" ng-controller="MenuController">
+<section class="container">
     <h3>Burgers</h3>
     <div id="menuContainer" >
         <div ng-repeat="menuItem in menuArray | filter: menuItem.category='Burgers'" >
             <div class='menu-item-container well'>
                 <p class='menu-item-name'>{{ menuItem.name }}</p>
-                <p class='menu-item-price'>{{ menuItem.price | currency }}</p>
+                <div class='menu-item-price'>
+                    <p>{{ menuItem.price | currency }}</p>
+                    <button class="btn btn-success" ng-click="addToOrder(menuItem)">add To Order</button>
+                </div>
                 <p class='menu-item-description'>{{ menuItem.description }}</p>
             </div>
         </div>

@@ -1,0 +1,17 @@
+<section class="container" >
+    <h3>Current Order</h3>
+    <div id="menuContainer" >
+        <div ng-repeat="cartItem in currentCart"  >
+            <div class='cart-item-container well'>
+                <div class='menu-item-name'>{{ cartItem.name }}</div>
+                <div class='menu-item-price'>
+                    {{ cartItem.price | currency }}&nbsp;&nbsp;&nbsp;<button class="btn btn-danger" ng-click="removeFromOrder($index)">X</button>
+
+                </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
