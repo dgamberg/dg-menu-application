@@ -16,13 +16,13 @@ myApp.controller('MenuController', ['$scope', '$http', 'shoppingCart', function(
     $scope.currentCart = shoppingCart.getShoppingCart();
     $scope.ordersTotal = shoppingCart.ordersTotal;
 
-    $scope.updateTotal = function(){
-        $scope.ordersTotal = 0;
-
-        angular.forEach($scope.currentCart.price, function() {
-            $scope.ordersTotal += currentCart.price;
-        });
-    }
+    //$scope.updateTotal = function(){
+    //    $scope.ordersTotal = 0;
+    //
+    //    angular.forEach($scope.currentCart.price, function() {
+    //        $scope.ordersTotal += currentCart.price;
+    //    });
+    //}
 
     $scope.addToOrder = function(menuItem){
         $scope.currentCart.push(menuItem);
