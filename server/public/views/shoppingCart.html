@@ -5,11 +5,16 @@
             <div class='cart-item-container well'>
                 <div class='menu-item-name'>{{ cartItem.name }}</div>
                     <div class='menu-item-price'>
-                        {{ cartItem.price | currency }}&nbsp;&nbsp;&nbsp;
+                        {{ cartItem.price | currency: '$'}}&nbsp;&nbsp;&nbsp;
                         <button class="btn btn-danger" ng-click="removeFromOrder($index)">X</button>
                     </div>
                 </div>
             </div>
         </div>
+        <div>
+            TOTAL: {{ ordersTotal | currency: '$'}}
+
+        </div>
+
     </div>
 </section>

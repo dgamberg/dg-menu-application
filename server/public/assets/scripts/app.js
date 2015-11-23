@@ -1,9 +1,10 @@
 var myApp = angular.module('myApp',  ['ngRoute']);
 
-myApp.controller('MenuController', ['$scope', '$http', 'shoppingCart' ,function($scope, $http, shoppingCart){
+myApp.controller('MenuController', ['$scope', '$http', 'shoppingCart', function($scope, $http, shoppingCart){
     //Menu Display
     $scope.menu = {};
     $scope.menuArray = [];
+
     $scope.displayMenu = function(){
         $http.get('/data').then(function(response){
             $scope.menuArray = response.data;
@@ -13,18 +14,35 @@ myApp.controller('MenuController', ['$scope', '$http', 'shoppingCart' ,function(
 
     //Shopping Cart functions
     $scope.currentCart = shoppingCart.getShoppingCart();
+    $scope.ordersTotal = shoppingCart.ordersTotal;
+
+    $scope.updateTotal = function(){
+        $scope.ordersTotal = 0;
+
+        angular.forEach($scope.currentCart.price, function() {
+            $scope.ordersTotal += currentCart.price;
+        });
+    }
+
     $scope.addToOrder = function(menuItem){
         $scope.currentCart.push(menuItem);
+        $scope.updateTotal(menuItem);
+
     }
+
     $scope.removeFromOrder = function(index){
         $scope.currentCart.splice(index, 1);
+        $scope.updateTotal(menuItem);
+
     }
+
 }]);
 
 //Shopping Cart Factory
 myApp.factory('shoppingCart', function(){
     var currentCart = [];
     var shoppingCart = {};
+    shoppingCart.ordersTotal = 0;
 
     shoppingCart.getShoppingCart = function(){
         return currentCart;
