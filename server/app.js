@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var pg = require('pg');
 //var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/dg-restaurant-menu';
 var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/d7ok4h9na8io6d';
+//var Firebase = require("firebase");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ expanded: true }));
@@ -36,6 +37,26 @@ app.get('/data', function(req,res){
         }
     });
 });
+
+//Get an Item by ID
+app.put('/data/:id', function(req,res){
+    console.log(req.params.id);
+    var menuItem = req.params.id;
+    var result = [];
+    pg.connect(connectionString, function (err, client) {
+        var query = client.query("SELECT * FROM restaurant_menu WHERE id = $1", [menuItem]);
+
+        query.on('row', function (row) {
+            result.push(row);
+        });
+
+        query.on('end', function () {
+            query.end();
+            return res.json(result);
+        });
+    });
+});
+
 
 app.get("/*", function(req,res){
     var file = req.params[0] || "/views/index.html";

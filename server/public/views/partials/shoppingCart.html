@@ -1,6 +1,6 @@
 <section class="container" >
     <h3>Current Order</h3>
-    <div id="menuContainer" >
+    <div id="cartContainer" >
         <div ng-repeat="cartItem in currentCart track by $index"  >
             <div class='cart-item-container well'>
                 <div class='menu-item-name'>{{ cartItem.name }}</div>
@@ -10,11 +10,12 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div>
-            TOTAL: {{ ordersTotal | currency: '$'}}
+        <div class="order-total" ng-show="{{ ordersTotal }}">
+            Your Order Total: {{ ordersTotal | currency: '$'}}
 
         </div>
+        </div>
+
 
     </div>
 </section>
