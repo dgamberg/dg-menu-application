@@ -2,7 +2,7 @@ Restaurant Application
 
 BRANCH - 1st Try is the current working branch I am working on
 
-Issues:
+=>To Do List
 Register functions need to be completed.
 - user can log in, but object in upper right is not functioning IDing user
 - Need to restrict access to backend pages vs. front end
@@ -10,18 +10,19 @@ Register functions need to be completed.
 - Logout Function
 
 Checkout Proccess
-
+  - finish this out
+  - 
 Live Orders
 - Mongo with AJAX Listener to see changes or Firebase
 
-=> TO DO LIST
-- convert Menu To Mongo
-- clean up app.js and separate concerns
--
-=> STYLE
+STYLE
 - create a bottom line style
 - Angular Material?
 
-=> ANIMATIONS
+ANIMATIONS
 - on page switch
 - on cart item added
+
+=> Side TO DO  List
+- convert Menu To Mongo
+- clean up app.js and separate concerns
