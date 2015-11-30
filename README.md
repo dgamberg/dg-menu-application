@@ -3,8 +3,8 @@ Restaurant Application
 BRANCH - 1st Try is the current working branch I am working on
 
 =>To Do List
-Register functions need to be completed.
 - user can log in, but object in upper right is not functioning IDing user
+- Register functions need to be completed.
 - Need to restrict access to backend pages vs. front end
 - Need to separate Admin user to Customer user
 - Logout Function
