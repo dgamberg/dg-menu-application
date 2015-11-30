@@ -1,23 +1,30 @@
-<div class="container">
-    <h4>Register</h4>
-    <form>
-        <div class="login-input">
-            <input id="firstName" type="text" name="firstName" required placeholder="First Name"/>
-        </div>
-        <div class="login-input">
-            <input id="lasttName" type="text" name="lasttName" required placeholder="Last Name"/>
-        </div>
-        <div class="login-input">
-            <input id="email" type="email" name="emailAddress" required placeholder="Email Address"/>
-        </div>
-        <div class="login-input">
-            <input id="username" type="text" name="username" required placeholder="Username"/>
-        </div>
-        <div class="login-input">
-            <input id="password" type="password" name="password" required placeholder="Password"/>
-        </div>
-        <div class="login-input">
-            <button id="submit" class="btn btn-primary">Login</button>
-        </div>
-    </form>
-</div>
+<section class="container">
+    <h1 class="lead">Register</h1>
+        <form action="/register" method="post">
+            <div>
+                <label for="firstName">First Name:</label>
+                <input type="text" name="firstName" id="firstName" required>
+            </div>
+
+            <div>
+                <label for="lastName">Last Name:</label>
+                <input type="text" name="lastName" id="lastName" required>
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="username">Username:</label>
+                <input class="form-input" type="text" name="username" id="username" required>
+            </div>
+
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+
+            <input class="btn btn-primary" type="submit" value="Register"/>
+        </form>
+</section>

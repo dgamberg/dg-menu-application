@@ -1,8 +1,4 @@
 
-<!--<div id="main-logo">-->
-    <!--<img id="logo-image" src="../../assets/images/chotchkies.jpg"/>-->
-<!--</div>-->
-
 <div class="container">
     <div id="topNavigation">
         <ul class="nav nav-pills">
@@ -11,13 +7,16 @@
             <li role="presentation" ><a href="#/about">About</a></li>
             <li role="presentation" ><a href="#/contact">Contact</a></li>
 
-
-            <li>
-                <a class="login-link" href="#/register">Register</a>
-            </li>
-            <li><a class="login-link" href="#/login">Sign In</a></li>
             <li role="presentation" class="active">
                 <a href="#/shopping-cart">Cart&nbsp;(&nbsp;{{currentCart.length}}&nbsp;)</a>
+            </li>
+            <li>
+                <div id="welcome">
+                </div>
+                <div role="presentation">
+                    <a class="login-link" href="#/register">Register</a> |
+                    <a class="login-link" href="#/login">Log In</a>
+                </div>
             </li>
         </ul>
 

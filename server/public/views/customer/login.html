@@ -1,15 +1,20 @@
 
-<div class="container">
-    <h4>Login</h4>
-    <form action="#/admin" >
-        <div class="login-input">
-            <input id="username" type="text" name="username" required placeholder="Username"/>
-        </div>
-        <div class="login-input">
-            <input id="password" type="password" name="password" required placeholder="Password"/>
-        </div>
-        <div class="login-input">
-            <button id="submit" class="btn btn-primary">Login</button>
-        </div>
-    </form>
-</div>
+<section class="container">
+    <h1 class="lead">Login</h1>
+
+        <form action="/" method="post">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username"/>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password"/>
+            </div>
+            <div>
+                <input class="btn btn-primary" type="submit" value="Log In"/>
+                <a href="#/register">Register</a>
+            </div>
+        </form>
+
+</section>

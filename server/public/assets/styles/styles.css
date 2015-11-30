@@ -106,3 +106,6 @@ h4.menu-top-text {
 #edit-container{
     margin-top: 25px;
 }
+label{
+    width: 125px;
+}
