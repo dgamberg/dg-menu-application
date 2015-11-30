@@ -1,7 +1,5 @@
 Restaurant Application
 
-BRANCH - 1st Try is the current working branch I am working on
-
 =>To Do List
 
 user can log in, but object in upper right is not functioning IDing user
