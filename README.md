@@ -1,24 +1,27 @@
-# sql_conversion_assignment
+Restaurant Application
 
-Given the mongo delete lecture activity, convert the mongo-based addPerson ajax call to use the Postgres database. You’ll need to get PSQL running on your computer, set up a new database and create a table for the people as such:
-```
-CREATE TABLE people
-(
-  id serial NOT NULL,
-  name character varying(255) NOT NULL,
-  location character varying(255) NOT NULL,
-  age integer,
-  CONSTRAINT people_pkey PRIMARY KEY (id)
-);
-```
+BRANCH - 1st Try is the current working branch I am working on
 
-1. Add 2 new fields (using the ALTER command or using PgAdmin) to the people table to store the spirit animal as a varchar(255) and address as varchar(255).
-2. In order to use these columns, you'll have to update the form and client app.js to append these to the DOM.
+Issues:
+Register functions need to be completed.
+- user can log in, but object in upper right is not functioning IDing user
+- Need to restrict access to backend pages vs. front end
+- Need to separate Admin user to Customer user
+- Logout Function
 
-**NOTE:** The "/data" get route is already updated to select fields with SQL for you. You’ll need to update the SELECT command to work with the new fields, however.
+Checkout Proccess
 
-#HARD MODE
-Convert the Delete route to Postgres using the correct SQL command. You’ll have to change the _id in index.html to id and make sure the DOM has the correct id from your database for each person.
+Live Orders
+- Mongo with AJAX Listener to see changes or Firebase
 
-#PRO MODE
-Create a get “/find” route that takes a name and runs a SELECT command, using SQL’s LIKE feature to find similar names.
+=> TO DO LIST
+- convert Menu To Mongo
+- clean up app.js and separate concerns
+-
+=> STYLE
+- create a bottom line style
+- Angular Material?
+
+=> ANIMATIONS
+- on page switch
+- on cart item added
