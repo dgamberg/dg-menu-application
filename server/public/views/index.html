@@ -8,20 +8,26 @@
 
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
     <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/vendors/jquery.min.js"></script>
+    <!--<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>-->
 
     <script type="text/javascript" src="/assets/scripts/app.js"></script>
+    <script type="text/javascript" src="/assets/scripts/siteRoutes.js"></script>
+    <script type="text/javascript" src="/assets/scripts/shoppingCart.js"></script>
+    <script type="text/javascript" src="/assets/scripts/user.js"></script>
+    <!--<script type="text/javascript" src="/assets/scripts/dg-firebase.js"></script>-->
 
 </head>
 <body ng-controller="MenuController">
     <section class="container">
 
-        <header ng-include="'/views/header.html'"></header>
+        <header ng-include="'/views/includes/navigation.html'"></header>
 
-        <nav ng-include="'/views/navigation.html'"></nav>
+        <nav ng-include="'/views/includes/menu.html'"></nav>
 
         <main ng-view ></main>
 
-        <footer ng-include="'/views/footer.html'"></footer>
+        <footer ng-include="'/views/includes/footer.html'"></footer>
 
     </section>
 </body>

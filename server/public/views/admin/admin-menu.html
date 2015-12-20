@@ -1,0 +1,7 @@
+<div ng-controller="MenuController">
+    <div id="edit-container" ng-repeat="item in menuArray">
+        <div class="well">
+            {{item.name}}<a class="edit-link" ng-click="getItem(item.id)">Edit</a>
+        </div>
+    </div>
+</div>
